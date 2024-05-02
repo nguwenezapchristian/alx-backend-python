@@ -6,4 +6,5 @@ as arguments and returns their sum as a float
 
 
 def add(a: float, b: float) -> float:
+    """ This is add a type-annotated func """
     return a + b
