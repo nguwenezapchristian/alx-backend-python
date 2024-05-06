@@ -10,7 +10,8 @@ import random
 from typing import Union
 
 
-async def wait_random(max_delay=10) -> Union[int | float]:
+async def wait_random(max_delay: float =10) -> Union[int | float]:
     """ an async function which returns a random float number """
-    await asyncio.sleep(max_delay)
-    return random.uniform(0, max_delay)
+    delay: float = random.uniform(0, max_delay)
+    await asyncio.sleep(delay)
+    return delay
