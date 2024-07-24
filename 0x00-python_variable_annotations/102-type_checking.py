@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-a type-annotated function zoom_array that takes a list lst
-and an integer factor as arguments and returns a list
+A type-annotated function zoom_array that takes a tuple lst
+and an integer factor as arguments and returns a tuple
 """
 
 from typing import List, Tuple
 
 
-def zoom_array(lst: List, factor: int = 2) -> List:
-    """ Zoom array """
+def zoom_array(lst: Tuple, factor: int = 2) -> Tuple:
+    """Zoom array by repeating each item factor times"""
     zoomed_in: List = [
         item for item in lst
-        for i in range(factor)
+        for _ in range(factor)
     ]
-    return zoomed_in
+    return tuple(zoomed_in)
